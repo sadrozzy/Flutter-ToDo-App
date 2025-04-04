@@ -17,19 +17,30 @@ class TaskItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      title: Text(
-        task.title,
-        style: TextStyle(
-          decoration:
-              task.isDone ? TextDecoration.lineThrough : TextDecoration.none,
-        ),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 3.0, vertical: 4.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Row(
+            children: [
+              CheckButton(isChecked: task.isDone, onChanged: (_) => onToggle()),
+              SizedBox(width: 8),
+              Text(
+                task.title,
+                style: TextStyle(
+                  fontSize: 16,
+                  decoration:
+                      task.isDone
+                          ? TextDecoration.lineThrough
+                          : TextDecoration.none,
+                ),
+              ),
+            ],
+          ),
+          DeleteButton(onChanged: (_) => onDelete()),
+        ],
       ),
-      leading: CheckButton(
-        isChecked: task.isDone,
-        onChanged: (_) => onToggle(),
-      ),
-      trailing: DeleteButton(onChanged: (_) => onDelete()),
     );
   }
 }
