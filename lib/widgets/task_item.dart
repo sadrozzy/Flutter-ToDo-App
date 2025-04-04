@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/models/task.dart';
-import 'package:flutter_application_1/widgets/check_button.dart';
-import 'package:flutter_application_1/widgets/delete_button.dart';
+import 'package:todo_app/models/task.dart';
+import 'package:todo_app/widgets/check_button.dart';
+import 'package:todo_app/widgets/delete_button.dart';
 
 class TaskItem extends StatelessWidget {
   final Task task;

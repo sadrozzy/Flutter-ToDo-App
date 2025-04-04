@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/models/task.dart';
-import 'package:flutter_application_1/widgets/create_task_form.dart';
-import 'package:flutter_application_1/widgets/tasks_list.dart';
+import 'package:todo_app/models/task.dart';
+import 'package:todo_app/widgets/create_task_form.dart';
+import 'package:todo_app/widgets/tasks_list.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
